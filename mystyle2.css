@@ -1,0 +1,183 @@
+.borderdebug-red {
+  border: 2px solid red;
+}
+
+.borderdebug-blue {
+  border: 2px solid blue;
+}
+
+.borderdebug-green {
+  border: 2px solid green;
+}
+
+.borderdebug-purple {
+  border: 2px solid purple;
+}
+
+.borderdebug-gold {
+  border: 2px solid gold;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  z-index: 100;
+}
+.toggle-theme .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.toggle-theme .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.toggle-theme input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.toggle-theme input:checked + .slider {
+  background-color: #2196f3;
+}
+.toggle-theme input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #ccc;
+}
+body.dark-mode textarea, body.dark-mode select, body.dark-mode button {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #ddd;
+}
+body.dark-mode textarea:hover, body.dark-mode select:hover, body.dark-mode button:hover {
+  background-color: #404040;
+}
+body.dark-mode select:hover, body.dark-mode button:hover {
+  cursor: pointer;
+}
+body textarea, body select, body button {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #555;
+  transition: background-color 0.3s;
+}
+body textarea:hover, body select:hover, body button:hover {
+  background-color: #ececec;
+}
+body select:hover, body button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px;
+  margin-top: 50px;
+}
+.container .container-textareas, .container .controls {
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
+.container .container-textareas label, .container .controls label {
+  margin-bottom: 15px;
+}
+.container .container-textareas {
+  flex: 3;
+}
+.container .container-textareas textarea {
+  width: 95%;
+  height: 25vh;
+  resize: none;
+  margin-bottom: 10px;
+}
+.container .container-textareas button {
+  width: 25%;
+}
+.container .controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .controls select {
+  width: 95%;
+  margin-bottom: 8px;
+}
+.container .controls button {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .container-textareas, .container .controls {
+    width: 100%;
+  }
+  .container .container-textareas button {
+    width: 100%;
+  }
+}
+
+.notification {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #ccc;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 101;
+  left: 50%;
+  bottom: 30px;
+}
+.notification.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 1s;
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=mystyle2.css.map */

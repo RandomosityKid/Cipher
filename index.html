@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cipher</title>
+	<link rel="stylesheet" href="mystyle2.css">
+</head>
+<body>
+	<div id="notification" class="notification"></div>
+	<div class="toggle-theme">
+		<label class="switch">
+			<input type="checkbox" checked>
+			<span class="slider round"></span>
+		</label>
+	</div>
+	<div class="container ">
+		<div class="container-textareas ">
+			<label for="plaintext">PLAINTEXT</label>
+			<textarea id="plaintext" placeholder="Hello World"></textarea>
+			<button id="clipboard-plaintext">Clipboard</button>
+		</div>
+		<div class="controls ">
+			<select id="cipher-type">
+				<option value="kimmyloo">Kimmyloo</option>
+				<option value="base64">Base64</option>
+				<option value="custCipher">Custom</option>
+			</select>
+			<button id="clear">Clear</button>
+		</div>
+		<div class="container-textareas ">
+			<label for="ciphertext">CIPHERTEXT</label>
+			<textarea id="ciphertext" placeholder="Jimmu Xusmf"></textarea>
+			<button id="clipboard">Clipboard</button>
+		</div>
+	</div>
+	<script src="myScript.js"></script>
+</body>
+</html>
